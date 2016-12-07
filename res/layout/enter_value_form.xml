@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+<RelativeLayout
+  android:layout_height="fill_parent" android:layout_width="fill_parent"  android:padding="10px" android:layout_margin="20dp" android:background="@color/background_color_2" android:id="@+id/valLayout">
+<TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/containerName" android:text="MeterName" android:layout_marginBottom="3px" android:textSize="30dip"></TextView>
+<TextView android:layout_below="@+id/containerName" android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/containerDescription" android:text="MeterDescription" android:layout_marginBottom="10px"></TextView>
+
+<Spinner
+    android:id="@+id/valueSpinner"
+    android:layout_width="200dp"
+    android:layout_height="50dp"
+    android:layout_below="@+id/containerDescription"
+    android:layout_marginRight="10dp"
+    android:hint="Wert"
+    android:imeOptions="actionNext"
+    android:inputType="numberDecimal"
+    android:lines="1"
+    android:selectAllOnFocus="true" >
+</Spinner>
+
+<TextView
+    android:id="@+id/containerOldValue"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/valueSpinner"
+    android:layout_marginBottom="20px"
+    android:text="FormerValue"
+    android:visibility="invisible" >
+
+</TextView><Button android:layout_below="@+id/containerOldValue" android:id="@+id/saveButton" android:layout_width="fill_parent" android:layout_height="50dip" android:drawableLeft="@android:drawable/ic_menu_save" android:drawablePadding="-50dip" ></Button>
+<com.echo.holographlibrary.BarGraph
+    	android:layout_marginTop="20dp"
+    	android:layout_width="match_parent"
+        android:layout_below="@+id/saveButton"
+        android:layout_height="200dp"
+        android:id="@+id/graph"/>
+</RelativeLayout>
+</ScrollView>
